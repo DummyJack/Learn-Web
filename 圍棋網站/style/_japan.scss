@@ -1,0 +1,37 @@
+div.japan {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  img {
+    flex: 1 1 200px;
+    width: 60vh;
+  }
+  .info {
+    flex: 3 1 600px;
+    margin: 1.5rem;
+    ul {
+      margin-left: 1.5rem;
+    }
+  }
+}
+
+div.competition {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  div.text {
+    flex: 5 1 300px;
+    padding: 1rem;
+    h2 {
+      font-size: 2rem;
+    }
+    ul {
+      margin-left: 1.5rem;
+    }
+  }
+}
+
+#piechart {
+  width: 1rem;
+  flex: 1 1 500px;
+}

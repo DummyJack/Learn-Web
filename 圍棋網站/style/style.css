@@ -1,0 +1,151 @@
+@charset "UTF-8";
+/* 整體 */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+  font-family: DFKai-sb; /* 標楷體 */
+}
+
+h2,
+h3,
+h4 {
+  color: rgb(41, 191, 49);
+}
+
+p {
+  padding: 0.5rem 0rem;
+}
+
+/* 首頁 */
+div.top {
+  padding: 1rem;
+  background-image: url("../images/background.png");
+  opacity: 1;
+}
+
+/* 導覽列 */
+nav.navigation {
+  display: flex;
+  width: 110%;
+  background-color: black;
+}
+nav.navigation a {
+  padding: 1rem 1.6rem 1rem 0.9rem;
+  font-size: 19px;
+  color: white;
+  text-decoration: none;
+}
+nav.navigation a:hover {
+  color: yellow;
+}
+
+@media screen and (max-width: 530px) {
+  header nav {
+    flex-direction: column;
+  }
+}
+/* section */
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+main section {
+  background-color: white;
+  padding: 1rem;
+}
+
+section.left {
+  flex: 1 1 200px;
+}
+section.left img {
+  width: 90%;
+}
+section.left p {
+  margin-bottom: 0.8rem;
+  font-size: 18px;
+}
+section.left table {
+  margin-top: 1rem;
+}
+section.left table,
+section.left tr,
+section.left td {
+  padding: 0.25rem;
+}
+
+section.right {
+  flex: 4 1 500px;
+}
+section.right h2 {
+  font-size: 1.5rem;
+  padding-top: 0.5rem;
+}
+section.right ul {
+  margin-left: 2rem;
+}
+
+main.no-flex {
+  display: block;
+}
+
+/* 韓國棋院 */
+div.person-intro {
+  padding: 1rem;
+  margin: 2rem;
+  border: 4px solid saddlebrown;
+}
+
+/* 日本棋院 */
+div.japan {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+}
+div.japan img {
+  flex: 1 1 200px;
+  width: 60vh;
+}
+div.japan .info {
+  flex: 3 1 600px;
+  margin: 1.5rem;
+}
+div.japan .info ul {
+  margin-left: 1.5rem;
+}
+
+div.competition {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+div.competition div.text {
+  flex: 5 1 300px;
+  padding: 1rem;
+}
+div.competition div.text h2 {
+  font-size: 2rem;
+}
+div.competition div.text ul {
+  margin-left: 1.5rem;
+}
+
+#piechart {
+  width: 1rem;
+  flex: 1 1 500px;
+}
+
+/* 中國棋院 */
+section.china-table th {
+  color: rgb(163, 128, 190);
+  font-weight: bolder;
+  background-color: aquamarine;
+}
+section.china-table td {
+  padding: 0 3rem 1rem 0;
+}
+section.china-table table {
+  border: 1px solid white;
+  line-height: 2;
+}/*# sourceMappingURL=style.css.map */

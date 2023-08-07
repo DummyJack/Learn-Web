@@ -1,0 +1,127 @@
+// 變數
+$whiteColor: white;
+
+// mixin
+@mixin flexbox($display_type) {
+  display: $display_type;
+}
+
+/* 整體 */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+  font-family: DFKai-sb; /* 標楷體 */
+}
+h2,
+h3,
+h4 {
+  color: rgb(41, 191, 49);
+}
+p {
+  padding: 0.5rem 0rem;
+}
+
+/* 首頁 */
+div.top {
+  padding: 1rem;
+  background-image: url("../images/background.png");
+  opacity: 1;
+}
+
+// Nested
+
+/* 導覽列 */
+nav.navigation {
+  @include flexbox(flex);
+  width: 110%;
+  background-color: black;
+  a {
+    padding: 1rem 1.6rem 1rem 0.9rem;
+    font-size: 19px;
+    color: $whiteColor; // 變數
+    text-decoration: none;
+    &:hover {
+      color: yellow;
+    }
+  }
+}
+
+@media screen and (max-width: 530px) {
+  header nav {
+    flex-direction: column;
+  }
+}
+
+/* section */
+
+main {
+  @include flexbox(flex);
+  flex-wrap: wrap;
+  section {
+    background-color: $whiteColor;
+    padding: 1rem;
+  }
+}
+
+section.left {
+  flex: 1 1 200px;
+  img {
+    width: 90%;
+  }
+  p {
+    margin-bottom: 0.8rem;
+    font-size: 18px;
+  }
+  table {
+    margin-top: 1rem;
+  }
+  table,
+  tr,
+  td {
+    padding: 0.25rem;
+  }
+}
+
+section.right {
+  flex: 4 1 500px;
+  h2 {
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+  }
+  ul {
+    margin-left: 2rem;
+  }
+}
+
+main.no-flex {
+  @include flexbox(block);
+}
+
+/* 韓國棋院 */
+div.person-intro {
+  padding: 1rem;
+  margin: 2rem;
+  border: 4px solid saddlebrown;
+}
+
+// import
+/* 日本棋院 */
+@import "./japan";
+
+/* 中國棋院 */
+section.china-table {
+  th {
+    color: rgb(163, 128, 190);
+    font-weight: bolder;
+    background-color: aquamarine;
+  }
+  td {
+    padding: 0 3rem 1rem 0;
+  }
+  table {
+    border: 1px solid $whiteColor; // 變數
+    line-height: 2;
+  }
+}
