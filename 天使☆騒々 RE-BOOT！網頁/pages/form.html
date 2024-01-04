@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" href="../img/favicon1.icon" />
+  </head>
+  <body>
+    <form action="">
+      <!-- 姓名 <input> tag -->
+      <div>
+        <p>
+          <label for="姓名">姓名</label>
+          <input
+            id="姓名"
+            type="text"
+            name="name"
+            minlength="3"
+            maxlength="50"
+            placeholder="請輸入真實姓名"
+          />
+        </p>
+      </div>
+      <!-- 性別 <select> tag -->
+      <div>
+        <p>
+          <label for="gender">性別</label>
+          <select name="gender" id="gender" required>
+            <option value=""></option>
+            <option value="male">男性</option>
+            <option value="female">女性</option>
+            <option value="other">其他</option>
+          </select>
+        </p>
+      </div>
+      <!-- 電子郵件 <select> tag -->
+      <div>
+        <p>
+          <label for="電子郵件">電子郵件</label>
+          <input id="電子郵件" type="email" name="email" />
+        </p>
+      </div>
+      <!-- 密碼 <select> tag -->
+      <div>
+        <p>
+          <label for="password">password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            minlength="8"
+            maxlength="20"
+          />
+          <input type="checkbox" id="show" onclick="showPassword" />
+          <label for="show">showPassword</label>
+        </p>
+      </div>
+      <!-- 年齡 <select> tag -->
+      <div>
+        <p>
+          <label for="age">年齡</label>
+          <input id="age" type="number" name="age" min="0" max="150" />
+        </p>
+      </div>
+      <!-- 地址 <datalist> tag -->
+      <div>
+        <p>
+          <label for="area">地址</label>
+          <input list="area-list" type="text" name="area" id="area" />
+          <datalist id="area-list">
+            <option value="台北市">台北市</option>
+            <option value="台中市">台中市</option>
+            <option value="台南市">台南市</option>
+            <option value="高雄市">高雄市</option>
+            <option value="桃園市">桃園市</option>
+          </datalist>
+        </p>
+      </div>
+      <!-- 個人介紹 <textarea> tag -->
+      <div>
+        <p>
+          <textarea
+            style="font-size: 16px; width: 1055px; height: 598px"
+            name="intro"
+            id="intro"
+            cols="50"
+            rows="50"
+            placeholder="自我介紹"
+            ;
+          ></textarea>
+        </p>
+      </div>
+      <!-- 更新訊息通知 <input> tag -->
+      <div>
+        <p>
+          <input type="checkbox" name="order" id="order" checked value="yes" />
+          <label for="order">更新訊息通知</label>
+        </p>
+      </div>
+      <!-- 預設: type="submit" -->
+      <p>
+        <button>提交表單</button>
+      </p>
+    </form>
+    <!-- 是否顯示密碼 -->
+    <script>
+      let checkbox = document.querySelector("#show");
+      let password = document.querySelector("#password");
+      checkbox.addEventListener("click", () => {
+        if (password.type == "password") {
+          password.type = "text";
+        } else {
+          password.type = "password";
+        }
+      });
+    </script>
+  </body>
+</html>
